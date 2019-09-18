@@ -12,7 +12,7 @@ package edu.sbcc.cs105;
 
 
 /**
- * This class implements an emplyee which is a person with a name and a salary.
+ * This class implements an emplyee which is a person with a name and a salary...
  *
  */
 public class Employee {
