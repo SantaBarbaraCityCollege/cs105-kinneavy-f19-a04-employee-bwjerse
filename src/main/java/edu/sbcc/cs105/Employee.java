@@ -10,23 +10,23 @@
  */
 package edu.sbcc.cs105;
 
+
 /**
- * This class provides first level testing the Employee object.
+ * This class implements an emplyee which is a person with a name and a salary.
  *
  */
-public class Program {
+public class Employee {
 
     /**
      * Constructor that creates a new Employee with an initial name and salary.
      * 
      */
-    private String employeeName = "unknown";
-    private double currentSalary = 0.0;
-
-    public Program(String employeeName, double currentSalary) {
+    private String employeeName;
+    private double currentSalary;
+    public Employee(String employeeName, double currentSalary) {
         this.employeeName = employeeName;
         this.currentSalary = currentSalary;
-        // instance variable is private
+//instance variable is private
     }
 
     // using this to avoid issues with variables
@@ -36,20 +36,16 @@ public class Program {
 
     public double getSalary() {
         return currentSalary;
-        // return salary, seems simple enough
+		// return salary, seems simple enough
     }
 
     /**
      * Raise the salary by the amount specified by the explicit argument.
      * 
      */
+    // formula to raise salary
     public void raiseSalary(double byPercent) {
-        currentSalary = currentSalary * (byPercent / 100);
+		currentSalary = (currentSalary * (byPercent * 0.01)) + currentSalary;
     }
-// harrysSalary, shouldn't it be currentSalary?
-    public static void main(String[] args) {
-        Program harry = new Program("Harry", 10000);
-harry.raiseSalary(10); // Harry gets a 10% raise.
-double harrysSalary = harry.getSalary();
-    }
+
 }
